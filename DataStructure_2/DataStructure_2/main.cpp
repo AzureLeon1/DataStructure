@@ -39,6 +39,16 @@ public:
         this->next = ptr;
     }
     
+    LinkNode* getNext() const
+    {
+        return next;
+    }
+    
+    int getData() const
+    {
+        return data;
+    }
+    
 };
 
 class LinkList
@@ -122,9 +132,32 @@ void LinkList::output() const
     }
 }
 
+/*
+ @brief:求两个链表的非降序链表的交集，并保存在链表result中
+ */
 void intersection(LinkList* input1, LinkList* input2, LinkList* result)
 {
-    //todo:求交集函数
+    LinkNode* p1 = input1->getHead()->getNext();
+    LinkNode* p2 = input2->getHead()->getNext();
+    
+    while(p1!=nullptr && p2!=nullptr)
+    {
+        if(p1->getData() == p2->getData())
+        {
+            result->insertToTail(p1->getData());
+            p1 = p1->getNext();
+            p2 = p2->getNext();
+        }
+        else if(p1->getData() > p2->getData())
+        {
+            p2 = p2->getNext();
+        }
+        else
+        {
+            p1 = p1->getNext();
+        }
+    }
+    
 }
 
 int main(int argc, const char * argv[])
