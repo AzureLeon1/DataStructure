@@ -17,11 +17,9 @@
 迷宫问题的求解过程可以采用回溯法即在一定的约束条件下试探地搜索前进，若前进中受阻，则及时回头纠正错误另择通路继续搜索的方法。从入口出发，按某一方向向前探索，若能走通，即某处可达，则到达新点，否则探索下一个方向；若所有的方向均没有通路，则沿原路返回前一点，换下一个方向再继续试探，直到所有可能的道路都探索到，或找到一条通路，或无路可走又返回入口点。在求解过程中，为了保证在达到某一个点后不能向前继续行走时，能正确返回前一个以便从下一个方向向前试探，则需要在试探过程中保存所能够达到的每个点的下标以及该点前进的方向，当找到出口时试探过程就结束了。
 */
 
-
-//todo: 输出迷宫；迷宫符号表示
-
 //解题思路：使用一个栈来存储试探过程中走过的路径，从而将递归算法改为非递归算法
 #include <iostream>
+#include <iomanip>
 #include "SeqStack.h"
 
 //前进方向表
@@ -52,24 +50,44 @@ int maze[row+2][col+2] =
 };
 int mark[row+2][col+2];
 
-//template<class T>
-//class LinkedStack
-//{
-//public:
-//    LinkedStack(){top = nullptr;}
-//    ~LinkedStack(){makeEmpty();}
-//    void push(const T& x);
-//    bool pop(T& x);
-//    bool getTop(T& x) const;
-//    bool isEmpty()const {return {top == nullptr? true: false};}
-//    int getSize() const;
-//    void makeEmpty();
-//    friend std::ostream& operator << (std::ostream& os, LinkedStack<T> s);
-//
-//private:
-//    LinkNode<T>* top;
-//};
 
+/*
+ *@brief: 打印迷宫地图
+ */
+void printMaze()
+{
+    int cnt1, cnt2;
+    cout<<setiosflags(ios::left);
+    //输出第一行
+    cout<<setw(7)<<"";
+    for (cnt1=0; cnt1<=col+1; cnt1++)
+    {
+        cout<<setw(8)<<to_string(cnt1)+"列";
+    }
+    cout<<endl;
+    //输出迷宫各行
+    for (cnt1=0; cnt1<=row+1; cnt1++)
+    {
+        cout<<setw(8)<<to_string(cnt1)+"行";
+        for (cnt2=0; cnt2<=col+1; cnt2++)
+        {
+            switch (maze[cnt1][cnt2]) {
+                case 1:
+                    cout<<setw(7)<<"#";
+                    break;
+                case 0:
+                    cout<<setw(7)<<"0";
+                    break;
+                case 2:
+                    cout<<setw(7)<<"x";
+                    break;
+                default:
+                    break;
+            }
+        }
+        cout<<endl;
+    }
+}
 
 /*
  @brief: 打印路径，不包含出口结点
@@ -98,9 +116,11 @@ void seekPath(int targetX, int targetY)
     items tmp;
     tmp.x = 1; tmp.y = 1; tmp.dir = 1;          //首结点（起点）的第一个搜索方向，（不必向上方搜索）
     st.Push(tmp);
+    maze[tmp.x][tmp.y] = 2;
     while (st.IsEmpty() == false)
     {
         st.Pop(tmp);
+        maze[tmp.x][tmp.y] = 0;
         i = tmp.x; j = tmp.y; d = tmp.dir;
         while (d < 4)
         {
@@ -110,9 +130,13 @@ void seekPath(int targetX, int targetY)
             {
                 tmp.x = i; tmp.y = j; tmp.dir = d;
                 st.Push(tmp);
+                maze[tmp.x][tmp.y] = 2;
+                maze[targetX][targetY] = 2;
+                cout<<"迷宫地图："<<endl;
+                printMaze();
                 cout<<"迷宫路径："<<endl;
                 printSt(st);
-                cout<<" ---> ("<<targetX<<", "<<targetY<<")"<<endl;
+                cout<<"("<<targetX<<", "<<targetY<<")"<<endl;
                 return;
             }
             if (maze[g][h] == 0 && mark[g][h] == 0)
@@ -120,6 +144,7 @@ void seekPath(int targetX, int targetY)
                 mark[g][h] = 1;
                 tmp.x = i; tmp.y = j; tmp.dir = d;
                 st.Push(tmp);
+                maze[tmp.x][tmp.y] = 2;
                 i = g; j = h; d = 0;
             }
             else d++;
