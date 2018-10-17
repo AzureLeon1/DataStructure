@@ -11,7 +11,7 @@
 
 //题目文档中减号格式有问题
 
-//todo: 输出结尾不应有空格
+//todo: 找过一位的整数、非整数、负数
 
 #include <iostream>
 #include "SeqStack.h"
@@ -81,8 +81,7 @@ int icp(char c)
 
 void postFix(SeqStack<char>& s)
 {
-    rewind(stdin);
-    
+    cout<<"请输入中缀表达式（每个字符间用空格分隔，结尾没有多余的空格）："<<endl;
     char ch = '#', ch1, op;
     s.Push(ch);
     cin.get(ch);
@@ -90,10 +89,15 @@ void postFix(SeqStack<char>& s)
     {
         if(isdigit(ch))
         {
-            cout<<ch<<' ';
+            cout<<ch;
             cin.get(ch);
             if (ch=='\n')
+            {
+                if(s.getSize()>1)
+                    cout<<' ';
                 break;
+            }
+            cout<<' ';
             cin.get(ch);     //先读入一个空格
         }
         else
@@ -111,6 +115,7 @@ void postFix(SeqStack<char>& s)
             {
                 s.Pop(op);
                 cout<<op<<' ';
+                
             }
             else{
                 s.Pop(op);
@@ -129,7 +134,9 @@ void postFix(SeqStack<char>& s)
     while(s.getSize()>1)
     {
         s.Pop(op);
-        cout<<op<<' ';
+        cout<<op;
+        if(s.getSize()>1)
+            cout<<' ';
     }
 }
 
