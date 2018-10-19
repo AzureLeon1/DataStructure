@@ -11,8 +11,6 @@
 
 //题目文档中减号格式有问题
 
-//todo: 找过一位的整数、非整数、负数
-
 #include <iostream>
 #include "SeqStack.h"
 
@@ -79,18 +77,51 @@ int icp(char c)
     }
 }
 
+/*
+ *@brief: 判断是否是数字
+ */
+bool isDigit(char& ch, string& tempDigit, bool& haveChecked)
+{
+    if(ch == '-' || ch == '+')
+    {
+        if(haveChecked)
+            return false;
+        tempDigit += ch;
+        cin.get(ch);
+    }
+    while(isdigit(ch) || ch=='.')
+    {
+        tempDigit += ch;
+        cin.get(ch);
+    }
+    
+    if(tempDigit.length() > 0 && tempDigit != "-" && tempDigit != "+")
+        return true;
+    else
+    {
+        if(tempDigit == "-" || tempDigit == "+")
+            haveChecked = true;
+        return false;
+    }
+}
+
 void postFix(SeqStack<char>& s)
 {
     cout<<"请输入中缀表达式（每个字符间用空格分隔，结尾没有多余的空格）："<<endl;
+    bool haveCheckedNeviOrPosi = false;
+    string tempDigit = "";
     char ch = '#', ch1, op;
     s.Push(ch);
     cin.get(ch);
-    while (s.IsEmpty() == false && ch != '#')
+    while (s.IsEmpty() == false)
     {
-        if(isdigit(ch))
+        //清空tempDigit
+        tempDigit = "";
+        
+        if( isDigit(ch, tempDigit, haveCheckedNeviOrPosi) )
         {
-            cout<<ch;
-            cin.get(ch);
+            cout<<tempDigit;
+
             if (ch=='\n')
             {
                 if(s.getSize()>1)
@@ -98,15 +129,26 @@ void postFix(SeqStack<char>& s)
                 break;
             }
             cout<<' ';
-            cin.get(ch);     //先读入一个空格
+            cin.get(ch);
         }
         else
         {
+            if(tempDigit == "-")
+                ch = '-';
+            if(tempDigit == "+")
+                ch = '+';
+            
             s.getTop(ch1);
             if(icp(ch) > isp(ch1))
             {
                 s.Push(ch);
-                cin.get(ch);
+                
+                if(ch=='-' || ch=='+')
+                    haveCheckedNeviOrPosi = false;
+                
+                if(ch != '-' && ch != '+')
+                    cin.get(ch);
+                
                 if (ch=='\n')
                     break;
                 cin.get(ch);
