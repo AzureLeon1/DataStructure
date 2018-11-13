@@ -24,7 +24,8 @@ void showMenu()
     cout << "**\t\t\tB --- 添加家族成员\t\t\t**\n";
     cout << "**\t\t\tC --- 解散局部家庭\t\t\t**\n";
     cout << "**\t\t\tD --- 更改家庭成员姓名\t\t\t**\n";
-    cout << "**\t\t\tE --- 退出程序\t\t\t\t**\n";
+    cout << "**\t\t\tE --- 显示完整家谱\t\t\t**\n";
+    cout << "**\t\t\tF --- 退出程序\t\t\t\t**\n";
     cout << "==========================================\n";
 }
 
@@ -45,7 +46,7 @@ void execute(Tree<string>& f)
 {
     
     char command = 'a';
-    while(command != 'E')
+    while(command != 'F')
     {
         cout << "请选择要执行的操作:" ;
         cin >>command;
@@ -53,18 +54,34 @@ void execute(Tree<string>& f)
         {
             case 'A':
             {
-                cout << "请输入要建立家庭的人的姓名:";
+                cout << "请输入要建立家庭的人的姓名：";
                 string name;
                 cin >> name;
-                if(!f.Find(name))
-                    cout << "找不到这个人，请重新输入！" << endl;
-                else if(f.getCurrent()->firstChild != nullptr)
+                while(!f.Find(name))
+                {
+                    cout << "找不到这个人，请重新输入：";
+                    cin>>name;
+                }
+                
+                if(f.getCurrent()->firstChild != nullptr)
                 {
                     cout << "他已经有家庭了，请不要破坏！" << endl;
                 }
                 else
                 {
-                    //todo
+                    cout<<"请输入"<<name<<"的儿女人数：";
+                    int num;
+                    cin>>num;
+                    while(num<=0)
+                    {
+                        cout<<"儿女人数的范围有误，请重新输入：";
+                        cin>>num;
+                    }
+                    cout<<"请依次输入"<<name<<"的儿女的姓名：";
+                    f.CreateSubTree(num);
+                    cout<<name<<"的第一代子孙是：";
+                    f.showChildren(f.getCurrent());
+                    cout<<endl<<endl;
                 }
             }
                 break;
@@ -73,17 +90,18 @@ void execute(Tree<string>& f)
                 cout << "请输入要添加儿子（或女儿）的人的姓名:";
                 string name;
                 cin >> name;
-                if(!f.Find(name))
+                while(!f.Find(name))
                 {
-                    cout << "找不到这个人，请重新输入！" << endl;
-                    break;
+                    cout << "找不到这个人，请重新输入：";
+                    cin>>name;
                 }
                 
                 cout << "请输入"<< name <<"新的添加儿子（或女儿）的人的姓名:";
                 cin >> name;
-                //todo
-//                insert(thisMan,name);
-//                display(thisMan);
+                f.addChild(f.getCurrent(), name);
+                cout<<name<<"的第一代子孙是：";
+                f.showChildren(f.getCurrent());
+                cout<<endl<<endl;;
             }
                 break;
             case 'C':
@@ -91,37 +109,42 @@ void execute(Tree<string>& f)
                 cout << "请输入要解散家庭的人的姓名:";
                 string name;
                 cin >> name;
-                if(!f.Find(name))
+                while(!f.Find(name))
                 {
-                    cout << "找不到这个人，请重新输入！" << endl;
-                    break;
+                    cout << "找不到这个人，请重新输入：";
+                    cin>>name;
                 }
                 cout << "要解散家庭的是" << name << endl;
-                //todo
-//                display(thisMan);
-//                auto child = thisMan->child;
-//                thisMan->child = nullptr;
-//                deleChild(child);
+                
+                cout<<name<<"的第一代子孙是：";
+                f.showChildren(f.getCurrent());
+                cout<<endl<<endl;
+                
+                f.removeAllDescendants(f.getCurrent());
+
             }
                 break;
             case 'D':
             {
                 cout << "请输入要更改姓名的人的目前姓名:";
-                string name;
-                cin >> name;
-                if(!f.Find(name))
+                string oldName, newName;
+                cin >> oldName;
+                while(!f.Find(oldName))
                 {
-                    cout << "找不到这个人，请重新输入！" << endl;
-                    break;
+                    cout << "找不到这个人，请重新输入：";
+                    cin>>oldName;
                 }
                 cout << "请输入更改后的姓名:";
-                cin >> name;
-                //todo
-//                changeName(thisMan,name);
-                cout << name << endl << endl;
+                cin >> newName;
+                f.changeData(f.getCurrent(), newName);
+                cout << oldName << "已更名为" << newName <<endl << endl;
             }
                 break;
             case 'E':
+                f.Output();
+                cout<<endl;
+                break;
+            case 'F':
                 cout <<"\n\n程序已经成功退出！";
                 break;
             default :

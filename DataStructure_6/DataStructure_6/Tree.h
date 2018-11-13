@@ -75,6 +75,87 @@ public:
     void CreateTree(istream &in = cin){
         CreateTree(in, root);
     }
+    
+    //给current指向的结点添加有n个孩子结点的子树
+    bool CreateSubTree(int n)
+    {
+        if(n<=0)
+        {
+            return false;
+        }
+        if(current->firstChild)
+        {
+            return false;
+        }
+        else
+        {
+            T temp;
+            TreeNode<T>* p = current;
+            cin>>temp;
+            p->firstChild = new TreeNode<T>(temp);
+            p = p->firstChild;
+            
+            for(int cnt = 1; cnt < n; cnt++)
+            {
+                cin>>temp;
+                p->nextSibling = new TreeNode<T>(temp);
+                p = p->nextSibling;
+            }
+            return true;
+        }
+    }
+    
+    //依次显示某个节点的第一代儿子节点
+    void showChildren(TreeNode<T>* p)
+    {
+        TreeNode<T>* temp = p->firstChild;
+        while(temp!=nullptr)
+        {
+            cout<<temp->data;
+            temp = temp->nextSibling;
+            if(temp!=nullptr)
+                cout<<" ";
+        }
+    }
+    
+    //给p指向的结点的儿子节点后面新增一个值为data的儿子结点
+    void addChild(TreeNode<T>* p, T data)
+    {
+        //定位到应添加节点的位置，并添加节点
+        TreeNode<T>* locationToAdd = p;
+        if (!locationToAdd->firstChild)
+        {
+            locationToAdd->firstChild = new TreeNode<T>(data);
+        }
+        else
+        {
+            locationToAdd = locationToAdd->firstChild;
+            while (locationToAdd->nextSibling)
+            {
+                locationToAdd = locationToAdd->nextSibling;
+            }
+            locationToAdd->nextSibling = new TreeNode<T>(data);
+        }
+    }
+    
+    //通过递归删除结点p的所有子孙结点
+    void removeAllDescendants(TreeNode<T>* p)
+    {
+        TreeNode<T>* temp = p->firstChild;
+        if (temp)
+        {
+            RemovesubTree(temp->firstChild);
+            RemovesubTree(temp->nextSibling);
+            delete temp;
+        }
+        p->firstChild = nullptr;
+    }
+    
+    void changeData(TreeNode<T>* p, T newData)
+    {
+        p->data = newData;
+    }
+    
     void Output(ostream &out = cout){        //树状格式输出
         Output(root, string(), out);
     }
