@@ -14,8 +14,6 @@
 //2.输出说明：在一行中输出两个输入序列的交集序列，数字间用空格分开，结尾不能有多余空格；若新链表为空，输出NULL。
 
 
-//todo:内存释放
-
 #include <iostream>
 
 class LinkList;
@@ -61,15 +59,15 @@ private:
     int cntNode;              //结点计数
     
 public:
-    LinkList(){first = new LinkNode(); last = first; cntNode = 0;}    //无参构造函数
+    LinkList(){first = new LinkNode(); last = first; cntNode = 0;}      //无参构造函数
     ~LinkList(){makeEmpty(); delete first;}                           //析构函数
     
-    void makeEmpty();                                                 //将链表置为空表
-    LinkNode* getHead() const {return first;}                         //获取链表头
+    void makeEmpty();                                               //将链表置为空表
+    LinkNode* getHead() const {return first;}                          //获取链表头
     
-    void init();                                                      //后插法建立链表
-    void insertToTail(int newData);                                              //向链表尾部插入数据
-    void output() const;                                              //输出
+    void init();                                                    //后插法建立链表
+    void insertToTail(int newData);                                 //向链表尾部插入数据
+    void output() const;                                            //输出
     
 };
 
@@ -175,6 +173,10 @@ int main(int argc, const char * argv[])
     intersection(s1, s2, s3);
     
     s3->output();
+    
+    delete s1;
+    delete s2;
+    delete s3;
     
     return 0;
 }
