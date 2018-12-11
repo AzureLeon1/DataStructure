@@ -9,6 +9,7 @@
 
 
 //数据结构：图 邻接表（链表）表示 求最小生成树
+//todo: 选B时的输入不合法时
 
 #include <iostream>
 #include <string>
@@ -29,6 +30,17 @@ void showMenu()
     cout << "**\t\t\tD --- 显示最小生成树\t\t\t**\n";
     cout << "**\t\t\tE --- 退出程序\t\t\t\t**\n";
     cout << "==========================================\n";
+}
+
+void output(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
+{
+    int n = minTree->getNum();
+    auto edgevalue = minTree->getEdgeValue();
+    for(int i=1; i<=n; i++){
+        //        cout<<"Edge "<<i<<" : "<<"head = "<<edgevalue[i-1].head<<" ; tail = "<<edgevalue[i-1].tail<<" ; key = "<<edgevalue[i-1].key<<endl;
+        cout << grid->getValue(edgevalue[i-1].tail) << "-(" << edgevalue[i-1].key << ")->"<< grid->getValue(edgevalue[i-1].head) << "\t";
+    }
+    cout << endl;
 }
 
 void execute(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
@@ -61,6 +73,7 @@ void execute(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
                         //cout << tempName <<endl;
                         grid->insertVertex(tempName);
                     }
+                    isSystemBuilt = true;
                 }
                 cout << endl;
                 break;
@@ -80,7 +93,6 @@ void execute(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
                     {
                         cout << "请输入两个顶点及边：";
                         cin >> v1 >> v2 >> edge;
-                        cout << endl;
                         if (v1=="?" && v2=="?" && edge==0)
                             break;
                         grid->insertEdge(grid->getVertexPos(v1), grid->getVertexPos(v2), edge);
@@ -101,7 +113,7 @@ void execute(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
                     cout << "请输入起始顶点：";
                     cin >> tempName;
                     grid->Prim(*minTree, grid->getVertexPos(tempName));
-                    cout << endl << "生成Prim最小生成树！" << endl;
+                    cout << "生成Prim最小生成树！" << endl;
                 }
                 cout << endl;
                 break;
@@ -115,12 +127,17 @@ void execute(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
                 else
                 {
                     cout << "最小生成树的顶点及边为：" << endl;
-                    minTree->output();
+                    output(grid, minTree);
                 }
                 cout << endl;
                 break;
                 
+            case 'E':
+                cout << endl << endl << "程序已经成功退出！" << endl;
+                break;
+                
             default:
+                cout << "输入错误，请重新输入！" << endl;
                 break;
         }
     }
