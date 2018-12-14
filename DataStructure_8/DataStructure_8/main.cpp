@@ -7,9 +7,17 @@
 //
 
 
+//项目简介
+//假设一个城市有n个小区，要实现n个小区之间的电网都能够相互接通，构造这个城市n个小区之间的电网，使总工程造价最低。请设计一个能够满足要求的造价方案。
+//
+//项目功能要求：
+//在每个小区之间都可以设置一条电网线路，都要付出相应的经济代价。n个小区之间最多可以有n（n-1）/2条线路，选择其中的n-1条使总的耗费最少。
+
+
+
 
 //数据结构：图 邻接表（链表）表示 求最小生成树
-//todo: 选B时的输入不合法时
+//done: 选B时的输入不合法检测
 
 #include <iostream>
 #include <string>
@@ -88,14 +96,36 @@ void execute(Graphlnk<string, int>* grid, MinSpanTree<string, int>* minTree)
                 {
                     string v1 = "init", v2 = "init";
                     int edge = -1;
+                    bool isSuccessful = true;                     //是否成功插入边，添加电网的边时使用，当顶点不存在或边已经被插入过时为false
                     
                     while (true)
                     {
-                        cout << "请输入两个顶点及边：";
+                        if (isSuccessful == true)
+                        {
+                            cout << "请输入两个顶点及边：";
+                        }
+                        isSuccessful = true;                      //重新置为true
                         cin >> v1 >> v2 >> edge;
                         if (v1=="?" && v2=="?" && edge==0)
                             break;
-                        grid->insertEdge(grid->getVertexPos(v1), grid->getVertexPos(v2), edge);
+                        
+                        //输入合法检测
+                        int i_v1 = grid->getVertexPos(v1);
+                        int i_v2 = grid->getVertexPos(v2);
+                        if (i_v1 == -1 || i_v2 == -1)
+                        {
+                            cout << "顶点不存在，请重新输入两个顶点及边：";
+                            isSuccessful = false;
+                        }
+                        else
+                        {
+                            isSuccessful = grid->insertEdge(i_v1, i_v2, edge);
+                            if (!isSuccessful)
+                            {
+                                cout << "边已存在，请勿重复输入。请重新输入两个顶点及边：";
+                            }
+                        }
+                        
                     }
                     
                 }
