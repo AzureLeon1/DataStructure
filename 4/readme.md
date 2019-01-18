@@ -278,7 +278,7 @@ bool isDigit(char& ch, string& tempDigit, bool& haveChecked)
 
 测试结果：
 
-![image-20181230150537689](/Users/leon/Library/Application Support/typora-user-images/image-20181230150537689.png)
+![image-20181230150537689](https://ws1.sinaimg.cn/large/006tNc79gy1fzb43r2a8cj30oq05a3z7.jpg)
 
 测试结果正确。
 
@@ -286,7 +286,7 @@ bool isDigit(char& ch, string& tempDigit, bool& haveChecked)
 
 测试结果：
 
-![image-20181230150715247](/Users/leon/Library/Application Support/typora-user-images/image-20181230150715247.png)
+![image-20181230150715247](https://ws2.sinaimg.cn/large/006tNc79gy1fzb43rgyojj30sy09cwfc.jpg)
 
 测试结果正确。
 
@@ -294,7 +294,7 @@ bool isDigit(char& ch, string& tempDigit, bool& haveChecked)
 
 测试结果：
 
-![image-20181230150759649](/Users/leon/Library/Application Support/typora-user-images/image-20181230150759649.png)
+![image-20181230150759649](https://ws4.sinaimg.cn/large/006tNc79gy1fzb43rwicaj30sh0810tl.jpg)
 
 测试结果正确。
 
@@ -302,7 +302,7 @@ bool isDigit(char& ch, string& tempDigit, bool& haveChecked)
 
 测试结果：
 
-![image-20181230150837133](/Users/leon/Library/Application Support/typora-user-images/image-20181230150837133.png)
+![image-20181230150837133](https://ws3.sinaimg.cn/large/006tNc79gy1fzb43su4cej30xl09bt9k.jpg)
 
 测试结果正确。
 
@@ -310,7 +310,7 @@ bool isDigit(char& ch, string& tempDigit, bool& haveChecked)
 
 测试结果：
 
-![image-20181230150908853](/Users/leon/Library/Application Support/typora-user-images/image-20181230150908853.png)
+![image-20181230150908853](https://ws2.sinaimg.cn/large/006tNc79gy1fzb43scruoj30tc0aqgmd.jpg)
 
 测试结果正确。
 

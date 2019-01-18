@@ -281,7 +281,7 @@ void output(Graphlnk<T, E>* gl, int** rMtx, int numV)
 
 测试结果：
 
-![image-20181231011713052](/Users/leon/Library/Application Support/typora-user-images/image-20181231011713052.png)
+![image-20181231011713052](https://ws2.sinaimg.cn/large/006tNc79gy1fzb45fguh3j30l80geq3j.jpg)
 
 测试结果正确。
 
@@ -289,7 +289,7 @@ void output(Graphlnk<T, E>* gl, int** rMtx, int numV)
 
 测试结果：
 
-![image-20181231011752513](/Users/leon/Library/Application Support/typora-user-images/image-20181231011752513.png)
+![image-20181231011752513](https://ws1.sinaimg.cn/large/006tNc79gy1fzb45fu4anj30ok0k4my1.jpg)
 
 实现了按照题目要求的方式输出，即任务<5, 7>先于任务<5，8>输入，而作为关键活动输出时则次序相反。
 
@@ -297,7 +297,7 @@ void output(Graphlnk<T, E>* gl, int** rMtx, int numV)
 
 #### 1.3 不可行的方案测试
 
-![image-20181231011914594](/Users/leon/Library/Application Support/typora-user-images/image-20181231011914594.png)
+![image-20181231011914594](https://ws2.sinaimg.cn/large/006tNc79gy1fzb45gd80kj30ms0a23yw.jpg)
 
 由于存在有向环，因此没有关键活动。
 

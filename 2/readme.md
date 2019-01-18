@@ -276,30 +276,30 @@ int main(int argc, const char * argv[])
 
 #### 1.1 一般情况
 
-![image-20181229201418276](/Users/leon/Library/Application Support/typora-user-images/image-20181229201418276.png)
+![image-20181229201418276](https://ws1.sinaimg.cn/large/006tNc79gy1fzb435jwc1j30oe07kq3i.jpg)
 
 测试结果正确。
 
 #### 1.2 交集为空的情况
 
-![image-20181229201509735](/Users/leon/Library/Application Support/typora-user-images/image-20181229201509735.png)
+![image-20181229201509735](https://ws3.sinaimg.cn/large/006tNc79gy1fzb434lqg8j30ua07o0te.jpg)
 
 输出为NULL，测试结果正确。
 
 #### 1.3 完全相交的情况
 
-![image-20181229201630144](/Users/leon/Library/Application Support/typora-user-images/image-20181229201630144.png)
+![image-20181229201630144](https://ws2.sinaimg.cn/large/006tNc79gy1fzb4360by8j30q009w74z.jpg)
 
 测试结果正确。
 
 #### 1.4 其中一个序列完全属于交集的情况
 
-![image-20181229201706712](/Users/leon/Library/Application Support/typora-user-images/image-20181229201706712.png)
+![image-20181229201706712](https://ws1.sinaimg.cn/large/006tNc79gy1fzb433jtfcj30qi08iaas.jpg)
 
 测试结果正确。
 
 #### 1.5 其中一个序列为空的情况
 
-![image-20181229201742216](/Users/leon/Library/Application Support/typora-user-images/image-20181229201742216.png)
+![image-20181229201742216](https://ws1.sinaimg.cn/large/006tNc79gy1fzb4351yeej30ro09e3z6.jpg)
 
 输出为NULL，测试结果正确。

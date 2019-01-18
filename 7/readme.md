@@ -254,7 +254,7 @@ E HuffmanTree<E>::getWPL()
 
 ### 1. 功能测试
 
-![image-20181230215016015](/Users/leon/Library/Application Support/typora-user-images/image-20181230215016015.png)
+![image-20181230215016015](https://ws3.sinaimg.cn/large/006tNc79gy1fzb44qipodj30rk07qgm0.jpg)
 
 测试结果正确。
 
@@ -264,7 +264,7 @@ E HuffmanTree<E>::getWPL()
 
 测试结果：
 
-![image-20181230220407346](/Users/leon/Library/Application Support/typora-user-images/image-20181230220407346.png)
+![image-20181230220407346](https://ws3.sinaimg.cn/large/006tNc79gy1fzb44q2dggj30mk050dg1.jpg)
 
 只有一个木块的情况下不需要切割，所以花费为0，测试结果正确。
 
@@ -274,6 +274,6 @@ E HuffmanTree<E>::getWPL()
 
 测试结果：
 
-![image-20181230220702891](/Users/leon/Library/Application Support/typora-user-images/image-20181230220702891.png)
+![image-20181230220702891](https://ws2.sinaimg.cn/large/006tNc79gy1fzb44r0odyj30pc0500td.jpg)
 
 当输入的sumBlocks不是一个正整数时，要求用户重新输入，直到符合正整数要求，测试结果正确。

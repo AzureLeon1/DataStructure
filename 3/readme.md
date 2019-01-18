@@ -312,7 +312,7 @@ void printSt(SeqStack<items>& s)
 
 初始地图数据（二维数组）：
 
-![image-20181230140829505](/Users/leon/Library/Application Support/typora-user-images/image-20181230140829505.png)
+![image-20181230140829505](https://ws2.sinaimg.cn/large/006tNc79gy1fzb43iim3pj30fk0bm750.jpg)
 
 1表示墙壁，0表示可以走的通路。
 
@@ -320,7 +320,7 @@ void printSt(SeqStack<items>& s)
 
 程序运行结果：
 
-![image-20181230141040533](/Users/leon/Library/Application Support/typora-user-images/image-20181230141040533.png)
+![image-20181230141040533](https://ws4.sinaimg.cn/large/006tNc79gy1fzb43j5m60j30r00fy75x.jpg)
 
 寻找到的路径在地图中用 'x' 符号标出，并输出了路径中的每个位置的坐标。
 

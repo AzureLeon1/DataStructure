@@ -248,30 +248,30 @@ void handle(int sum, LinkedQueue<int>& win_1, LinkedQueue<int>& win_2)
 
 #### 1.1 正常测试，A窗口人多
 
-![image-20181230153615350](/Users/leon/Library/Application Support/typora-user-images/image-20181230153615350.png)
+![image-20181230153615350](https://ws1.sinaimg.cn/large/006tNc79gy1fzb443pznfj30ri05gwey.jpg)
 
 测试结果正确。
 
 #### 1.2 正常测试，B窗口人多
 
-![image-20181230153649529](/Users/leon/Library/Application Support/typora-user-images/image-20181230153649529.png)
+![image-20181230153649529](https://ws2.sinaimg.cn/large/006tNc79gy1fzb441phmmj30rw07kdgb.jpg)
 
 测试结果正确。
 
 #### 1.3 最小N
 
-![image-20181230153742932](/Users/leon/Library/Application Support/typora-user-images/image-20181230153742932.png)
+![image-20181230153742932](https://ws1.sinaimg.cn/large/006tNc79gy1fzb442rc4nj30mg05m3yr.jpg)
 
 测试结果正确。
 
 #### 1.4 只有奇数编号顾客
 
-![image-20181230153857569](/Users/leon/Library/Application Support/typora-user-images/image-20181230153857569.png)
+![image-20181230153857569](https://ws4.sinaimg.cn/large/006tNc79gy1fzb442awl2j30jy06iglz.jpg)
 
 测试结果正确。
 
 #### 1.5 只有偶数编号顾客
 
-![image-20181230153934958](/Users/leon/Library/Application Support/typora-user-images/image-20181230153934958.png)
+![image-20181230153934958](https://ws3.sinaimg.cn/large/006tNc79gy1fzb44393ktj30oc0740t6.jpg)
 
 测试结果正确。

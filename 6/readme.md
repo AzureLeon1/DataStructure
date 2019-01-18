@@ -199,7 +199,7 @@ void showMenu()
 }
 ```
 
-![image-20181230200521650](/Users/leon/Library/Application Support/typora-user-images/image-20181230200521650.png)
+![image-20181230200521650](https://ws3.sinaimg.cn/large/006tNc79gy1fzb44gsk2lj30ta0awwg5.jpg)
 
 ## 三、实现
 
@@ -226,7 +226,7 @@ void init(Tree<string>& f, TreeNode<string>& a)
 
 #### 1.2 运行截图
 
-![image-20181230200744318](/Users/leon/Library/Application Support/typora-user-images/image-20181230200744318.png)
+![image-20181230200744318](https://ws2.sinaimg.cn/large/006tNc79gy1fzb44fsd8mj30sc0e0mz6.jpg)
 
 ### 2. 菜单功能循环
 
@@ -355,7 +355,7 @@ cond1(yes)->out2->e
 
 #### 3.3 运行截图
 
-![image-20181230203003872](/Users/leon/Library/Application Support/typora-user-images/image-20181230203003872.png)
+![image-20181230203003872](https://ws1.sinaimg.cn/large/006tNc79gy1fzb44gan9nj30rq05gt9p.jpg)
 
 ### 4. 添加家族成员
 
@@ -398,7 +398,7 @@ cond(yes)->input2->op2->out->e
 
 #### 4.3 运行截图
 
-![image-20181230203437215](/Users/leon/Library/Application Support/typora-user-images/image-20181230203437215.png)
+![image-20181230203437215](https://ws4.sinaimg.cn/large/006tNc79gy1fzb44een2cj30s40k2n0q.jpg)
 
 ### 5. 解散局部家庭
 
@@ -444,7 +444,7 @@ cond(yes)->out->op2->e
 
 #### 5.3 运行截图
 
-![image-20181230204941789](/Users/leon/Library/Application Support/typora-user-images/image-20181230204941789.png)
+![image-20181230204941789](https://ws4.sinaimg.cn/large/006tNc79gy1fzb44hai4kj30n00lctal.jpg)
 
 ### 6. 更改家庭成员姓名
 
@@ -488,7 +488,7 @@ cond(yes)->input2->op2->out->e
 
 #### 6.3 运行截图
 
-![image-20181230205251950](/Users/leon/Library/Application Support/typora-user-images/image-20181230205251950.png)
+![image-20181230205251950](https://ws3.sinaimg.cn/large/006tNc79gy1fzb44fazlij30pa044mxv.jpg)
 
 ### 7. 显示完整家谱（创新功能）
 
@@ -529,7 +529,7 @@ template <typename T>void Tree<T>::Output(TreeNode<T> *subTree, string str, ostr
 
 #### 7.2 运行截图
 
-![image-20181230205605716](/Users/leon/Library/Application Support/typora-user-images/image-20181230205605716.png)
+![image-20181230205605716](https://ws4.sinaimg.cn/large/006tNc79gy1fzb44dehiaj30ka076gm1.jpg)
 
 ## 四、测试
 
@@ -541,7 +541,7 @@ template <typename T>void Tree<T>::Output(TreeNode<T> *subTree, string str, ostr
 
 #### 3.1 建立家庭的人不存在
 
-![image-20181230205820360](/Users/leon/Library/Application Support/typora-user-images/image-20181230205820360.png)
+![image-20181230205820360](https://ws2.sinaimg.cn/large/006tNc79gy1fzb44euh3hj30li0c6q3z.jpg)
 
 提示这个人不存在，要求重新输入。
 
@@ -549,7 +549,7 @@ template <typename T>void Tree<T>::Output(TreeNode<T> *subTree, string str, ostr
 
 #### 3.2 建立家庭的人已经拥有家庭
 
-![image-20181230205919372](/Users/leon/Library/Application Support/typora-user-images/image-20181230205919372.png)
+![image-20181230205919372](https://ws4.sinaimg.cn/large/006tNc79gy1fzb44hs35nj30p20f275o.jpg)
 
 提示这个人已经拥有家庭，要求重新输入。
 
@@ -557,7 +557,7 @@ template <typename T>void Tree<T>::Output(TreeNode<T> *subTree, string str, ostr
 
 #### 3.3 建立家庭时儿女人数范围有误
 
-![image-20181230210007700](/Users/leon/Library/Application Support/typora-user-images/image-20181230210007700.png)
+![image-20181230210007700](https://ws1.sinaimg.cn/large/006tNc79gy1fzb44e0wsxj30pa0eumym.jpg)
 
 提示人数输入有误，要求重新输入人数。
 

@@ -302,7 +302,7 @@ cond(no)->input->op->e
 
 #### 1.3 运行截图
 
-![image-20181230234113416](/Users/leon/Library/Application Support/typora-user-images/image-20181230234113416.png)
+![image-20181230234113416](https://ws3.sinaimg.cn/large/006tNc79gy1fzb457el2yj30y80cwgnj.jpg)
 
 ### 2. 添加电网的边
 
@@ -384,9 +384,9 @@ cond3(no,left)->op(right)->input
 
 #### 2.3 运行截图
 
-![image-20181231000044699](/Users/leon/Library/Application Support/typora-user-images/image-20181231000044699.png)
+![image-20181231000044699](https://ws1.sinaimg.cn/large/006tNc79gy1fzb4575qqdj30su0dyq4o.jpg)
 
-![image-20181230235650249](/Users/leon/Library/Application Support/typora-user-images/image-20181230235650249.png)
+![image-20181230235650249](https://ws2.sinaimg.cn/large/006tNc79gy1fzb454qupzj30sy0kcdin.jpg)
 
 ### 3. 构造最小生成树
 
@@ -429,9 +429,9 @@ cond(yes)->input->op->e
 
 #### 3.3 运行截图
 
-![image-20181231000119305](/Users/leon/Library/Application Support/typora-user-images/image-20181231000119305.png)
+![image-20181231000119305](https://ws2.sinaimg.cn/large/006tNc79gy1fzb4564lg7j30xe0g3jtc.jpg)
 
-![image-20181231000256791](/Users/leon/Library/Application Support/typora-user-images/image-20181231000256791.png)
+![image-20181231000256791](https://ws3.sinaimg.cn/large/006tNc79gy1fzb4544sxjj30t00p2gp4.jpg)
 
 ### 4. 显示最小生成树
 
@@ -475,11 +475,11 @@ cond1(yes)->op->e
 
 #### 4.3 运行截图
 
-![image-20181231000915625](/Users/leon/Library/Application Support/typora-user-images/image-20181231000915625.png)
+![image-20181231000915625](https://ws1.sinaimg.cn/large/006tNc79gy1fzb456k9fhj30ns0aqq4f.jpg)
 
-![image-20181231001007660](/Users/leon/Library/Application Support/typora-user-images/image-20181231001007660.png)
+![image-20181231001007660](https://ws2.sinaimg.cn/large/006tNc79gy1fzb455nsm4j30s40kyju9.jpg)
 
-![image-20181231000847129](/Users/leon/Library/Application Support/typora-user-images/image-20181231000847129.png)
+![image-20181231000847129](https://ws1.sinaimg.cn/large/006tNc79gy1fzb4558u2dj30sc0scwia.jpg)
 
 ### 5. Prim算法求最小生成树
 
@@ -555,11 +555,11 @@ template <typename T, typename E>void Graph<T,E>::Prim(MinSpanTree<T, E> &MST, i
 
 测试结果：
 
-![image-20181231000044699](/Users/leon/Library/Application Support/typora-user-images/image-20181231000044699.png)
+![image-20181231000044699](https://ws1.sinaimg.cn/large/006tNc79gy1fzb4575qqdj30su0dyq4o.jpg)
 
-![image-20181231000119305](/Users/leon/Library/Application Support/typora-user-images/image-20181231000119305.png)
+![image-20181231000119305](https://ws2.sinaimg.cn/large/006tNc79gy1fzb4564lg7j30xe0g3jtc.jpg)
 
-![image-20181231000915625](/Users/leon/Library/Application Support/typora-user-images/image-20181231000915625.png)
+![image-20181231000915625](https://ws1.sinaimg.cn/large/006tNc79gy1fzb456k9fhj30ns0aqq4f.jpg)
 
 均提示应先创建电网顶点，测试结果正确。
 
@@ -567,6 +567,6 @@ template <typename T, typename E>void Graph<T,E>::Prim(MinSpanTree<T, E> &MST, i
 
 测试结果：
 
-![image-20181231001007660](/Users/leon/Library/Application Support/typora-user-images/image-20181231001007660.png)
+![image-20181231001007660](https://ws2.sinaimg.cn/large/006tNc79gy1fzb455nsm4j30s40kyju9.jpg)
 
 提示应先构造最小生成树，测试结果正确。

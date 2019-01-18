@@ -183,7 +183,7 @@ void LinkList::init()
 
 #### 1.3 建立功能截屏示例
 
-![image-20181229165317256](/Users/leon/Library/Application Support/typora-user-images/image-20181229165317256.png)
+![image-20181229165317256](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3v0xqrfj312q0d80yd.jpg)
 
 ### 2. 插入功能
 
@@ -241,7 +241,7 @@ void LinkList::insert()
 
 #### 2.3 插入功能截屏示例
 
-![image-20181229170125243](/Users/leon/Library/Application Support/typora-user-images/image-20181229170125243.png)
+![image-20181229170125243](https://ws3.sinaimg.cn/large/006tNc79gy1fzb3v6iu9uj31640pr77t.jpg)
 
 ### 3. 查找功能
 
@@ -299,7 +299,7 @@ void LinkList::search()
 
 #### 3.3 查找功能截屏示例
 
-![image-20181229170920398](/Users/leon/Library/Application Support/typora-user-images/image-20181229170920398.png)
+![image-20181229170920398](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3vasp1zj30ys0eugst.jpg)
 
 ### 4. 修改功能
 
@@ -361,7 +361,7 @@ void LinkList::modify()
 
 #### 4.3 修改功能截屏示例
 
-![image-20181229172010253](/Users/leon/Library/Application Support/typora-user-images/image-20181229172010253.png)
+![image-20181229172010253](https://ws3.sinaimg.cn/large/006tNc79gy1fzb3vdynj1j312i0lg491.jpg)
 
 ### 5. 删除功能
 
@@ -426,7 +426,7 @@ void LinkList::deleteData()
 
 #### 5.3 删除功能截屏示例
 
-![image-20181229172321570](/Users/leon/Library/Application Support/typora-user-images/image-20181229172321570.png)
+![image-20181229172321570](https://ws3.sinaimg.cn/large/006tNc79gy1fzb3vhb4slj30y80ii7cw.jpg)
 
 ### 6. 统计功能
 
@@ -474,7 +474,7 @@ void LinkList::output() const
 
 #### 6.3 统计功能截屏示例
 
-![image-20181229172743860](/Users/leon/Library/Application Support/typora-user-images/image-20181229172743860.png)
+![image-20181229172743860](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3vlet6yj311a078juu.jpg)
 
 ### 7. 主函数
 
@@ -535,7 +535,7 @@ cond(yes)->end
 
 #### 7.3 主函数截屏示例
 
-![image-20181229172846009](/Users/leon/Library/Application Support/typora-user-images/image-20181229172846009.png)
+![image-20181229172846009](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3vop7znj30v606ct9s.jpg)
 
 ## 四、测试
 
@@ -551,7 +551,7 @@ cond(yes)->end
 
 测试结果：
 
-![image-20181229173529088](/Users/leon/Library/Application Support/typora-user-images/image-20181229173529088.png)
+![image-20181229173529088](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3vtwtljj30uw08a762.jpg)
 
 #### 2.2 删除头结点
 
@@ -559,7 +559,7 @@ cond(yes)->end
 
 测试结果：
 
-![image-20181229173938359](/Users/leon/Library/Application Support/typora-user-images/image-20181229173938359.png)
+![image-20181229173938359](https://ws3.sinaimg.cn/large/006tNc79gy1fzb3vy67bdj314g0dowky.jpg)
 
 #### 2.3 删除后链表为空
 
@@ -567,7 +567,7 @@ cond(yes)->end
 
 测试结果：
 
-![image-20181229174048455](/Users/leon/Library/Application Support/typora-user-images/image-20181229174048455.png)
+![image-20181229174048455](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3w0uspwj310e0hiwh0.jpg)
 
 ### 3. 出错测试
 
@@ -575,23 +575,23 @@ cond(yes)->end
 
 测试结果：
 
-![image-20181229174131985](/Users/leon/Library/Application Support/typora-user-images/image-20181229174131985.png)
+![image-20181229174131985](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3w3rokdj30qe056406.jpg)
 
 #### 3.2 操作码错误
 
 测试结果：
 
-![image-20181229174341178](/Users/leon/Library/Application Support/typora-user-images/image-20181229174341178.png)
+![image-20181229174341178](https://ws4.sinaimg.cn/large/006tNc79gy1fzb3w5jjbsj30zm0e87ay.jpg)
 
 #### 3.3 插入位置不合法
 
 测试结果：
 
-![image-20181229174435928](/Users/leon/Library/Application Support/typora-user-images/image-20181229174435928.png)
+![image-20181229174435928](https://ws2.sinaimg.cn/large/006tNc79gy1fzb3w8uji0j310s07q0w3.jpg)
 
 #### 3.4 删除、查找、修改的考生不存在
 
 测试结果：
 
-![image-20181229174550569](/Users/leon/Library/Application Support/typora-user-images/image-20181229174550569.png)
+![image-20181229174550569](https://ws4.sinaimg.cn/large/006tNc79gy1fzb3wbme9bj30wg0g2ju0.jpg)
 

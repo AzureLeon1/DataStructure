@@ -539,23 +539,23 @@ void radixSort (StaticList<int>* list, const int d, long long& swapTimes)
 
 ### 1. 100个随机数
 
-![image-20181231132326048](/Users/leon/Library/Application Support/typora-user-images/image-20181231132326048.png)
+![image-20181231132326048](https://ws4.sinaimg.cn/large/006tNc79gy1fzb45r4417j30rs15cwmd.jpg)
 
 ### 2. 1000个随机数
 
-![image-20181231132736759](/Users/leon/Library/Application Support/typora-user-images/image-20181231132736759.png)
+![image-20181231132736759](https://ws2.sinaimg.cn/large/006tNc79gy1fzb45qal2fj30rq15kwmc.jpg)
 
 ### 3. 10000个随机数
 
-![image-20181231132904469](/Users/leon/Library/Application Support/typora-user-images/image-20181231132904469.png)
+![image-20181231132904469](https://ws2.sinaimg.cn/large/006tNc79gy1fzb45qrh8pj30rs15mai5.jpg)
 
 ### 4. 100000个随机数
 
-![image-20181231133240943](/Users/leon/Library/Application Support/typora-user-images/image-20181231133240943.png)
+![image-20181231133240943](https://ws2.sinaimg.cn/large/006tNc79gy1fzb45ppzsvj30rs15qthf.jpg)
 
 Windows操作系统下测试结果：
 
-![image-20190101232502672](/Users/leon/Library/Application Support/typora-user-images/image-20190101232502672.png)
+![image-20190101232502672](https://ws3.sinaimg.cn/large/006tNc79gy1fzb45p9nw4j30u015010n.jpg)
 
 ## 五、结果分析
 
